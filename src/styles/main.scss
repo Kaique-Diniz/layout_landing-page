@@ -12,12 +12,20 @@ $font-primary: poppins, sans-serif;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #1d1d1d;
   color: #fff;
   font-family: $font-primary;
   overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 .header {
@@ -41,6 +49,7 @@ body {
   }
 
   &__title {
+    display: block;
     margin: 0;
     width: 187px;
     height: 56px;
@@ -51,6 +60,7 @@ body {
     background-repeat: no-repeat;
 
     color: transparent;
+    text-decoration: none;
   }
 
   &__icons {
@@ -67,6 +77,9 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;
+      border: none;
+      background-color: transparent;
+      padding: 0;
 
       &:hover {
         background-image: url('/src/images/Icon-Burger-menu-hover.png');
@@ -80,6 +93,8 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
   }
 
   &__tel-number {
@@ -165,6 +180,7 @@ body {
   box-sizing: border-box;
   padding: 36px 120px;
   font-family: $font-primary;
+  overflow-y: auto;
 
   @include on-tablet {
     padding: 24px 40px;
@@ -190,9 +206,13 @@ body {
   }
 
   &__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #c4c4c4;
   }
 
   &__logo {
@@ -202,6 +222,7 @@ body {
     margin: 0;
     color: #1d1d1d;
     line-height: 1;
+    text-decoration: none;
   }
 
   &__close {
@@ -249,6 +270,12 @@ body {
     font-weight: 700;
     color: #1d1d1d;
     margin: 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #4f4f4f;
+    }
   }
 
   &__cta {
@@ -259,6 +286,11 @@ body {
     text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #4f4f4f;
+    }
   }
 }
 
@@ -302,10 +334,21 @@ body {
   display: flex;
   flex-direction: column;
 
+  &__image-link {
+    display: block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
   &__img {
     width: 100%;
     object-fit: contain;
     margin-bottom: 24px;
+    display: block;
   }
 
   &__name {
@@ -377,9 +420,28 @@ body {
   gap: 16px 24px;
   margin-bottom: 80px;
 
+  &__image-link {
+    display: block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &--large {
+      grid-column: span 8;
+    }
+
+    &--small {
+      grid-column: span 4;
+    }
+  }
+
   &__img {
     width: 100%;
     object-fit: cover;
+    display: block;
 
     &--large {
       grid-column: span 8;
@@ -539,10 +601,17 @@ body {
         text-transform: capitalize;
       }
 
+      a,
       p {
         margin: 0;
         font-size: 16px;
         color: #fff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #c7c7c7;
+        }
       }
     }
   }
@@ -559,11 +628,19 @@ body {
     font-weight: 400;
     margin: 0;
     line-height: 140%;
+    display: inline-block;
   }
 }
 
 .footer {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
   width: 100%;
+
+  &__link {
+    display: block;
+  }
 
   &__img {
     width: 100%;
