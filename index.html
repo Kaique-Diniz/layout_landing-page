@@ -11,12 +11,177 @@
       rel="stylesheet"
       href="src/styles/main.scss"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     <script
       src="src/scripts/main.js"
       defer
     ></script>
   </head>
   <body>
-    <h1>Landing Page</h1>
+    <header class="header">
+      <h1 class="header__title"> MyBiKE</h1>
+
+      <div class="header__icons">
+        <div class="header__tel-container">
+          <span class="header__tel-number">+1 234 555-55-55</span>
+          <div class="header__icons__tel"></div>
+        </div>
+
+        <div class="header__icons__burguer"></div>
+      </div>
+
+    </header>
+    <!-- Menu Overlay -->
+    <nav class="menu" id="menu-overlay">
+      <div class="menu__container">
+        <div class="menu__header">
+          <h2 class="menu__logo">MyBiKE</h2>
+          <button class="menu__close" id="menu-close"
+          aria-label="Fechar menu">&times;</button>
+        </div>
+
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#home" class="menu__link">HOME</a></li>
+          <li class="menu__item"><a href="#product" class="menu__link">ABOUT US</a></li>
+          <li class="menu__item"><a href="#compare" class="menu__link">COMPARE BIKES</a></li>
+          <li class="menu__item"><a href="#details" class="menu__link">DETAILS</a></li>
+          <li class="menu__item"><a href="#contact" class="menu__link">CONTACTS</a></li>
+        </ul>
+
+        <div class="menu__footer">
+          <p class="menu__phone">+1 234 5555-55-55</p>
+          <a href="#contact" class="menu__cta">BOOK A TEST RIDE</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="home">
+        <h1 class="home__title"> Take the Streets</h1>
+      </section>
+      <section class="product">
+        <div class="container grid">
+          <h2 class="product__title">Move Free</h2>
+          <p class="product__text">Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.</p>
+        </div>
+      </section>
+      <section class="product">
+        <div class="container grid">
+          <h2 class="product__title-center">Compare Bikes</h2>
+
+          <article class="bike-card">
+            <img class="bike-card__img" src="./src/images/Sporty4.png"
+             alt="Sporty4">
+            <h3 class="bike-card__name"> Sporty 4</h3>
+            <p class="bike-card__desc">The iconic frame brought to a new performance height as a sporty, active ride.</p>
+            <span class="bike-card__price">$ 2 590</span>
+          </article>
+
+          <article class="bike-card">
+            <img class="bike-card__img" src="./src/images/RideTownST.png"
+             alt="Sporty4">
+            <h3 class="bike-card__name"> Ride in town ST</h3>
+            <p class="bike-card__desc">An open frame for an upright riding position as the most comfortable ride in town.</p>
+            <span class="bike-card__price">$ 2 590</span>
+          </article>
+          <article class="bike-card">
+            <img class="bike-card__img" src="./src/images/AgileRider.png"
+             alt="Sporty4">
+            <h3 class="bike-card__name"> Agile ride 3</h3>
+            <p class="bike-card__desc">The lightweight frame that has earned its street tread as a sleek, agile ride.</p>
+            <span class="bike-card__price">$ 2 090</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="details">
+        <div class="container grid">
+          <h2 class="details__title">The Details</h2>
+
+          <!-- Bloco 1 -->
+          <article class="details-item">
+            <img class="details-item__img details-item__img--large" src="src/images/Rectangle1.png"
+            alt="App bike control">
+            <img class="details-item__img details-item__img--small" src="src/images/Square1.png"
+            alt="Handlebar">
+            <div class="details-item__content">
+              <h3 class="details-item__title">Auto Unlock</h3>
+              <p class="details-item__text">The app senses when you're nearby to unlock automatically. GPS tracking so you know where your bike is and can track it anytime.</p>
+            </div>
+          </article>
+
+          <!-- Bloco 2 -->
+          <article class="details-item">
+            <img class="details-item__img details-item__img--large" src="src/images/Rectangle2.png"
+            alt="Bike rear light">
+            <img class="details-item__img details-item__img--small" src="src/images/Square2.png"
+            alt="Bike front light">
+            <div class="details-item__content">
+              <h3 class="details-item__title">Range & Integrated lights</h3>
+              <p class="details-item__text">The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
+            </div>
+          </article>
+
+          <!-- Bloco 3 -->
+          <article class="details-item">
+            <img class="details-item__img details-item__img--small" src="src/images/Square3.png"
+            alt="Hydraulic brakes">
+            <img class="details-item__img details-item__img--large" src="src/images/Rectangle3.png"
+            alt="Bike kickstand">
+            <div class="details-item__content">
+              <h3 class="details-item__title">Hydraulic disc brakes & Lightweight</h3>
+              <p class="details-item__text">Brakes with total stopping power the second you make contact. The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.</p>
+            </div>
+          </article>
+
+          <!-- Botão Explore -->
+          <div class="details__action">
+            <button class="details__btn">Explore</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container grid">
+          <h2 class="contact__title">Contact us</h2>
+
+          <div class="contact__content">
+
+            <form class="contact__form">
+              <input type="text" class="contact__input"
+              placeholder="Name">
+              <input type="email" class="contact__input"
+              placeholder="Email">
+              <textarea class="contact__textarea" placeholder="Message"></textarea>
+              <button type="submit" class="contact__btn">Send</button>
+            </form>
+
+            <div class="contact__info">
+              <div class="contact__info-item">
+                <h4 class="contact__subtitle">Phone</h4>
+                <p class="contact__text">+1 234 5555-55-55</p>
+              </div>
+
+              <div class="contact__info-item">
+                <h4 class="contact__subtitle">Email</h4>
+                <p class="contact__text">hello@miami.com</p>
+              </div>
+
+              <div class="contact__info-item">
+                <h4 class="contact__subtitle">Address</h4>
+                <p class="contact__text">400 first ave. suite 700 Minneapolis, MN 55401</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <img class="footer__img" src="/src/images/footer.png"
+      alt="Bikers on crosswalk">
+    </footer>
   </body>
 </html>
